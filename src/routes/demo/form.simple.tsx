@@ -3,7 +3,7 @@ import { z } from 'zod'
 
 import { useAppForm } from '#/hooks/demo.form'
 
-export const Route = createFileRoute('/demo/form')({
+export const Route = createFileRoute('/demo/form/simple')({
   component: SimpleForm,
 })
 
@@ -30,7 +30,7 @@ function SimpleForm() {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 p-4 text-white"
+      className="flex items-center justify-center min-h-screen p-4 text-white"
       style={{
         backgroundImage:
           'radial-gradient(50% 50% at 5% 40%, #add8e6 0%, #0000ff 70%, #00008b 100%)',
@@ -43,7 +43,7 @@ function SimpleForm() {
             e.stopPropagation()
             form.handleSubmit()
           }}
-          className="space-y-6"
+          className="flex flex-col gap-6"
         >
           <form.AppField name="title">
             {(field) => <field.TextField label="Title" />}

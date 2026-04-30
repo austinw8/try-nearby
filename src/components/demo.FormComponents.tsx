@@ -10,7 +10,7 @@ export function SubscribeButton({ label }: { label: string }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors disabled:opacity-50"
+          className="px-6 py-2 bg-lagoon-deep text-white rounded-md hover:bg-lagoon-deep/90 focus:outline-none focus:ring-2 focus:ring-lagoon-deep focus:ring-offset-2 transition-colors disabled:opacity-50"
         >
           {label}
         </button>
@@ -29,7 +29,7 @@ function ErrorMessages({
       {errors.map((error) => (
         <div
           key={typeof error === 'string' ? error : error.message}
-          className="text-red-500 mt-1 font-bold"
+          className="text-destructive mt-1 font-bold"
         >
           {typeof error === 'string' ? error : error.message}
         </div>
@@ -57,7 +57,7 @@ export function TextField({
           placeholder={placeholder}
           onBlur={field.handleBlur}
           onChange={(e) => field.handleChange(e.target.value)}
-          className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full px-4 py-2 rounded-md border border-(--line) focus:outline-none focus:ring-2 focus:ring-lagoon-deep"
         />
       </label>
       {field.state.meta.isTouched && <ErrorMessages errors={errors} />}
@@ -84,7 +84,7 @@ export function TextArea({
           onBlur={field.handleBlur}
           rows={rows}
           onChange={(e) => field.handleChange(e.target.value)}
-          className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full px-4 py-2 rounded-md border border-(--line) focus:outline-none focus:ring-2 focus:ring-lagoon-deep"
         />
       </label>
       {field.state.meta.isTouched && <ErrorMessages errors={errors} />}
@@ -113,7 +113,7 @@ export function Select({
         value={field.state.value}
         onBlur={field.handleBlur}
         onChange={(e) => field.handleChange(e.target.value)}
-        className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="w-full px-4 py-2 rounded-md border border-(--line) focus:outline-none focus:ring-2 focus:ring-lagoon-deep"
       >
         {values.map((value) => (
           <option key={value.value} value={value.value}>

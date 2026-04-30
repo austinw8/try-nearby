@@ -19,7 +19,7 @@ function TanStackQueryDemo() {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 p-4 text-white"
+      className="flex items-center justify-center min-h-screen p-4 text-white"
       style={{
         backgroundImage:
           'radial-gradient(50% 50% at 95% 5%, #f4a460 0%, #8b4513 70%, #1a0f0a 100%)',
@@ -29,7 +29,7 @@ function TanStackQueryDemo() {
         <h1 className="text-2xl mb-4">
           TanStack Query Simple Promise Handling
         </h1>
-        <ul className="mb-4 space-y-2">
+        <ul className="mb-4 flex flex-col gap-2">
           {data.map((todo) => (
             <li
               key={todo.id}

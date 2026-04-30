@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 
 import { useAppForm } from '#/hooks/demo.form'
 
-export const Route = createFileRoute('/demo/form')({
+export const Route = createFileRoute('/demo/form/address')({
   component: AddressForm,
 })
 
@@ -42,7 +42,7 @@ function AddressForm() {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 p-4 text-white"
+      className="flex items-center justify-center min-h-screen p-4 text-white"
       style={{
         backgroundImage:
           'radial-gradient(50% 50% at 5% 40%, #f4a460 0%, #8b4513 70%, #1a0f0a 100%)',
@@ -55,7 +55,7 @@ function AddressForm() {
             e.stopPropagation()
             form.handleSubmit()
           }}
-          className="space-y-6"
+          className="flex flex-col gap-6"
         >
           <form.AppField name="fullName">
             {(field) => <field.TextField label="Full Name" />}
