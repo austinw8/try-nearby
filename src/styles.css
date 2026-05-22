@@ -15,6 +15,7 @@
   --color-sand: var(--sand);
   --color-foam: var(--foam);
   --color-kicker: var(--kicker);
+  --color-ring: var(--ring);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
   --color-destructive: var(--destructive);
@@ -49,6 +50,7 @@
   --destructive-foreground: oklch(0.99 0 0);
   --success: oklch(0.527 0.154 150.069);
   --success-foreground: oklch(0.99 0 0);
+  --ring: var(--palm);
 }
 
 :root[data-theme="dark"] {
@@ -77,6 +79,7 @@
   --destructive-foreground: oklch(0.99 0 0);
   --success: oklch(0.696 0.17 162.48);
   --success-foreground: oklch(0.99 0 0);
+  --ring: var(--palm);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,6 +109,7 @@
     --destructive-foreground: oklch(0.99 0 0);
     --success: oklch(0.696 0.17 162.48);
     --success-foreground: oklch(0.99 0 0);
+    --ring: var(--palm);
   }
 }
 

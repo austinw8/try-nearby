@@ -6,8 +6,8 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import Footer from "../components/Footer";
-import { Header } from "../components/Header";
+import Footer from "../components/footer";
+import { Header } from "../components/header";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 import appCss from "../styles.css?url";
 
@@ -26,7 +26,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "TanStack Start Starter",
+				title: "Try Nearby",
 			},
 		],
 		links: [
@@ -37,6 +37,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 		],
 	}),
 	shellComponent: RootDocument,
+	notFoundComponent: () => (
+		<main className="page-wrap px-4 py-64">
+			<p className="text-sea-ink-soft text-sm text-center">Page not found.</p>
+		</main>
+	),
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
