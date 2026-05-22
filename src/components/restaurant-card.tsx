@@ -10,10 +10,12 @@ import { type Restaurant } from "@/lib/mock-restaurants";
 
 export function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
 	return (
-		<Card size="sm" className="; hover: cursor-pointer">
+		<Card size="sm" className="py-2 cursor-pointer">
 			<CardHeader>
 				<CardTitle>{restaurant.name}</CardTitle>
-				<CardDescription>{restaurant.address}</CardDescription>
+				<CardDescription className="text-xs">
+					{restaurant.address}
+				</CardDescription>
 				<CardAction>
 					<div className="flex flex-col items-end gap-1">
 						<span className="text-xs font-semibold text-sea-ink">
